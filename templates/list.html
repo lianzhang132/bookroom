@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+
+
+<a href="javascript:void(0)" onclick="del()">删除</a>
+{#<a href="javascript:;" onclick="del()">删除</a>#}
+{#<a href="javascript:del()" >删除1111</a>#}
+</body>
+</html>
+<script>
+
+
+    function del(){
+
+
+       $.post('/del_list',{'id':1},function(data){
+
+           if(data.errorcode == '1'){
+               location.href= ""
+           }else{
+
+           }
+
+       },'json')
+    }
+
+</script>

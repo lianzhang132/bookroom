@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>this is a addbook page </h1> <br>
+
+<form action="" method="post">
+{#    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">#}
+    书名<input type="text" name="book_title">
+    选择作者<select name="roles_id" id="">
+        {% for info in infos %}
+        <option value="{{ info.role_id }}">{{ info.role_name }}</option>
+        {% endfor %}
+
+    </select>
+    <input type="submit" value="提交">
+
+</form>
+
+
+</body>
+</html>
